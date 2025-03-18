@@ -1,0 +1,123 @@
+\newcommand{\abs}[1]{
+  \ensuremath
+  \lvert #1 \rvert
+}
+\newcommand{\norm}[1]{
+  \ensuremath
+  \lVert #1 \rVert
+}
+\newcommand*{\defeq}{
+  \ensuremath
+  \stackrel{\text{def}}{=}
+}
+\newcommand*{\zzeq}{
+  \ensuremath
+  \stackrel{\text{z.z.}}{=}
+}
+\newcommand*{\defiff}{
+  \ensuremath
+  \stackrel{\text{def}}{\iff}
+}
+\newcommand*{\union}{
+  \ensuremath
+  \: \cup \:
+}
+\newcommand*{\inter}{
+  \ensuremath
+  \: \cap \:
+}
+\newcommand{\uproman}[1]{\uppercase\expandafter{\romannumeral#1}}
+\newcommand{\lowroman}[1]{\romannumeral#1\relax}
+\newcommand{\limes}[1]{
+  \ensuremath
+  \displaystyle{\lim_{#1}}
+}
+\newcommand{\Ker}{
+  \ensuremath
+  \operatorname{Ker}
+}
+\newcommand{\Img}{
+  \ensuremath
+  \operatorname{Im}
+}
+\newcommand{\Hom}{
+  \ensuremath
+  \operatorname{Hom}
+}
+\newcommand{\inv}{
+  \ensuremath
+  \operatorname{inv}
+}
+\newcommand{\sgn}{
+  \ensuremath
+  \operatorname{sgn}
+}
+
+
+\newcounter{definitioncounter}
+\newtcolorbox[auto counter, number within=chapter]{define}[2][]{
+  colback=blue!5!white,
+  colframe=blue!75!black,
+  fonttitle=\bfseries,
+  title={Definition: #2},
+  sharp corners=south,
+  enhanced,
+  #1
+}
+
+\newcounter{propositioncounter}
+\newtcolorbox[auto counter, number within=chapter]{proposition}[2][]{
+  colback=green!5!white,
+  colframe=green!60!black,
+  fonttitle=\bfseries,
+  title=Proposition: {#2},
+  sharp corners=south,
+  enhanced,
+  #1
+}
+
+\newcounter{corollarycounter}
+\newtcolorbox[auto counter, number within=chapter]{corollary}[2][]{
+  colback=purple!5!white,
+  colframe=purple!60!black,
+  fonttitle=\bfseries,
+  title=Korollar: #2,
+  sharp corners=south,
+  enhanced,
+  #1
+}
+
+\newcounter{lemmacounter}
+\definecolor{turquoise}{RGB}{64, 224, 208}
+\newtcolorbox[auto counter, number within=chapter]{lemma}[2][]{
+  colback=turquoise!5!white,
+  colframe=turquoise!60!black,
+  fonttitle=\bfseries,
+  title=Lemma: #2,
+  sharp corners=south,
+  enhanced,
+  #1
+}
+
+\newcounter{anwendungscounter}
+\newtcolorbox[auto counter, number within=chapter]{anwendung}[2][]{
+  colback=blue!5!white,
+  colframe=blue!75!black,
+  fonttitle=\bfseries,
+  title={Anwendung: #2},
+  sharp corners=south,
+  enhanced,
+  #1
+}
+
+\NewDocumentCommand{\example}{ o }{
+  \noindent\textit{Beispiel
+    \IfValueTF{#1}{ (#1).}{.}
+  }
+}
+
+\NewDocumentCommand{\anmerkung}{ o }{
+  \noindent\textit{Anmerkung
+    \IfValueTF{#1}{ (#1).}{.}
+  }
+}

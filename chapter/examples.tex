@@ -1,0 +1,11 @@
+\newcount\oldchapter
+\oldchapter=\value{chapter} 
+\setcounter{chapter}{0}
+\renewcommand{\thechapter}{\alph{chapter}}
+
+% This is for optional example chapters after all other normal chapters.
+\include{chapter/examples/a_exampletemplate.tex}
+
+
+\renewcommand{\thechapter}{\arabic{chapter}}
+\setcounter{chapter}{\oldchapter}

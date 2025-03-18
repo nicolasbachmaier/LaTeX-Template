@@ -1,0 +1,69 @@
+\documentclass[12pt,a4paper,oneside,english]{book}
+% Package Imports
+\usepackage{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{xcolor}
+\usepackage{tcolorbox}
+\usepackage[autostyle]{csquotes}
+\usepackage[ngerman]{babel} 
+\usepackage{imakeidx}
+\usepackage{hyperref}
+\usepackage{mathtools}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{tikz}
+\usepackage{amsthm}
+\usepackage{xparse}
+\usepackage{esint}
+\usepackage{glossaries}
+\usepackage{cancel}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\usetikzlibrary{angles, quotes}
+\tcbuselibrary{skins,xparse,breakable}
+\renewcommand{\headrulewidth}{1sp}
+
+% Adapted chapter command
+\titleformat{\chapter}[hang]
+  {\normalfont\huge\bfseries}
+  {\thechapter.}{1em}
+  {}
+\makeindex[intoc]
+
+% (Warning ignores)
+\setlength{\headheight}{14.49998pt}
+\hbadness=99999
+\hfuzz=99pt
+
+% Macros
+\input{macros.tex}
+
+% Glossary
+\makenoidxglossaries
+\input{chapter/glossary.tex}
+
+% Title Page
+\title{\textbf{[Project Name]\\ {\normalsize Studynotes}}}
+\author{\Large Nicolas Bachmaier}
+\date{\vspace*{-5mm}\textit{Uni Wien 2024/2025}} 
+
+\lhead{{Nicolas Bachmaier (12344742)}}
+\rhead{{[Project Name] (Studynotes)}}
+
+\begin{document}
+\maketitle
+\tableofcontents
+
+\setcounter{chapter}{0} % 0 => Chapter starts at 1, -1 => Chapter starts at 0
+\include{chapter/1_templatechapter.tex}
+% Insert new chapters here like this
+
+% Uncomment if you want to include example chapters after all other chapters
+%\input{chapter/examples.tex} % Input instead include since examples.tex is nested
+
+\clearpage
+
+\printnoidxglossaries
+\end{document}

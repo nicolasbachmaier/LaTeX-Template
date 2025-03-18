@@ -1,0 +1,18 @@
+# Ignore LaTeX build files
+*.fdb_latexmk
+*.aux
+*.fls
+*.synctex.gz
+*.log
+*.out
+*.idx
+*.ilg
+*.ind
+*.toc
+*.glo
+*.glsdefs
+*.ist
+
+# Ignore system-based files
+*Nicolas’s MacBook Pro*
+*-MININT-*

@@ -1,0 +1,27 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"files.exclude": {
+			"**/*.log": true,
+			"**/*.out": true,
+			"**/*.fdb_latexmk": true,
+			"**/*.aux": true,
+			"**/*.idx": true,
+			"**/*.ilg": true,
+			"**/*.ind": true,
+			"**/*.toc": true,
+			"**/*.fls": true,
+			"**/*.glo": true,
+			"**/*.glsdefs": true,
+			"**/*.ist": true,
+			"**/*.synctex.gz": true,
+			"**/*Nicolas’s MacBook Pro*": true,
+			"**/*-MININT-*": true
+    	},
+		"editor.rulers": [100],
+	}
+}
